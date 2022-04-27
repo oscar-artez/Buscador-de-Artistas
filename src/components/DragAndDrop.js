@@ -9,26 +9,27 @@ const props = {
   multiple: true,
   listType:"picture",
   accept:".png,.jpg,.PNG,.JPG",
-   onChange(info){
-     const { status } = info.file;
-     if (status !== 'uploading') {
-       console.log(info.file, info.fileList);
-     }
-     if (status === 'done') {
-       message.success(`${info.file.name} file uploaded successfully.`);
-     } else if (status === 'error') {
-       message.error(`${info.file.name} file upload failed.`);
-     }
-   },
-  onDrop(e) {
-    console.log('Dropped files', e.dataTransfer.files);
-  },
 };
 
 
 const DragAndDrop = ({action, headers}) => {
+  
+ const onChange = (info)=>{
+    const { status } = info.file;
+    if (status !== 'uploading') {
+      console.log(info.file, info.fileList);
+    }
+    if (status === 'done') {
+      message.success(`${info.file.name} file uploaded successfully.`);
+    } else if (status === 'error') {
+      message.error(`${info.file.name} file upload failed.`);
+    }
+  }
+  const onDrop = (e) =>{
+   console.log('Dropped files', e.dataTransfer.files);
+ }
   return (
-    <Dragger {...props} action={action} headers={headers}>
+    <Dragger onChange={onChange} onDrop={onDrop} {...props} action={action} headers={headers}>
     <p className="ant-upload-drag-icon">
       <InboxOutlined />
     </p>

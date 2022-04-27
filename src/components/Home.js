@@ -6,10 +6,9 @@ import DragAndDrop from './DragAndDrop';
 const Home = () => {
   const API_KEY_NOMADA = process.env.REACT_APP_API_KEY_NOMADA;
   const headers = {
-    Nomada:API_KEY_NOMADA
+    Nomada: API_KEY_NOMADA
   };
   const url = getNomadaURl;
-console.log(API_KEY_NOMADA);
   // const api = helpHttp();
 
   const [respuesta, setRespuesta] = useState('');
@@ -35,7 +34,7 @@ console.log(API_KEY_NOMADA);
     <div>
       <DragAndDrop
       action={url}
-      header={headers}
+      headers={headers}
 
       />
     </div>
