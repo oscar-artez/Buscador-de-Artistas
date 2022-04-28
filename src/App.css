@@ -15,4 +15,14 @@
   color: white;
 }
 
+.Dragger{
+  border: 5px solid #fff;
+    text-align: center;
+    padding: 5%;
+    margin: 2%;
+}
 
+.IconDrop{
+  font-size: 50px;
+  margin: 0;
+}

@@ -2,12 +2,12 @@ import React, { useState,useEffect } from 'react'
 import { helpHttp } from '../helpers/helpHttp';
 import { getActorInfo } from '../services/getApi';
 import { Avatar } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { useSelector } from 'react-redux';
 
 const Filmografia = () => {
-  const [nameActor, setNameActor] = useState('Steve Buscemi');
+  const nameActor = useSelector(state => state.nameActor);
   const [infoActor, setInfoActor] = useState([]);
-
+  console.log(nameActor);
   const api = helpHttp();
   const url = getActorInfo(nameActor);
   useEffect(() => {
