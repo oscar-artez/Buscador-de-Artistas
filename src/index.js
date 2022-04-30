@@ -10,7 +10,6 @@ import { artistReducer } from './reducers/artistReducer';
 
 const store = createStore(artistReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const root = ReactDOM.createRoot(document.getElementById('root'));
-  store.subscribe(()=>console.log(store));
 root.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -2,27 +2,97 @@
   text-align: center;
 }
 
-
-
 .App-content {
-  background-color: #282c34;
+  background-color: #EFEFEF;
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.Dragger{
-  border: 5px solid #fff;
-    text-align: center;
-    padding: 5%;
-    margin: 2%;
+h1{
+  text-align: center;
+}
+.ant-upload.ant-upload-drag{
+  border: 5px solid #E2E2E2;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5%;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .IconDrop{
   font-size: 50px;
   margin: 0;
+}
+.ContainerDragnDrop{
+  background-color: #fff;
+  width: 80%;
+  padding: 5% ;
+}
+.AvatarCustom{
+  width: 100%;
+  height: fit-content;
+}
+.SiderCustom{
+  padding: 1%;
+}
+main{
+  padding: 0 20px 0 20px;
+}
+Main h1{
+  text-align: left;
+  font-size: 45px;
+  margin: 0;
+}
+.ContainerFlex{
+  display: flex;
+  justify-content: space-between;
+}
+.BlackText{
+  color: #000;
+}
+
+aside h1{
+  font-size: 35px;
+}
+
+.labelGender{
+background-color: rgba(255, 208, 53, 0.979);
+border: 2px solid rgb(238, 194, 48);
+border-radius: 5px;
+color: #6a6a6a;
+padding: 2% 3%;
+}
+.ant-layout-sider{
+  background: unset;
+  border-right: 2px solid #c7c7c7;
+}
+
+.PopularityText{
+  font-size: 25px;
+  color: #000;
+  margin: 5% 0;
+}
+.ant-layout-header{
+  background: unset;
+  border-bottom: 2px solid #c7c7c7;
+}
+.ContainerLayout{
+  padding: 1%;
+}
+.layoutStyles{
+  border: 2px solid #c7c7c7;
+  border-radius: 5px;
+}
+.ContainerButton{
+    text-align: center;
+    margin: 2% auto;
+}
+.ContainerButton Button{
+  background-color: rgb(62, 62, 236);
+  color: #fff;
 }

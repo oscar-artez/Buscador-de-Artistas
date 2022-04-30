@@ -10,6 +10,7 @@ const Home = () => {
 
   return (
     <div>
+      <h1>¿Quién es este actor?</h1>
       <DragAndDrop
       action={url}
       headers={headers}

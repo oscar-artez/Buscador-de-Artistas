@@ -6,6 +6,10 @@ export const TYPES = {
 
 export const createSearch = (content) =>
 ({
-    type:'SEARCH_ACTOR',
+    type: TYPES.SEARCH_ACTOR,
     payload:content
+})
+export const resetSearch = () =>
+({
+    type: TYPES.CLEAN_SEARCH
 })

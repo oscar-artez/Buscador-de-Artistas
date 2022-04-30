@@ -1,17 +1,21 @@
-import 'antd/dist/antd.less'; 
+// import 'antd/dist/antd.less';
+import 'antd/dist/antd.css'; 
 import './App.css';
-import './styles/Messages.css'
 import {Route, Routes} from 'react-router-dom'
 import Home from './components/Home';
 import Filmografia from './components/Filmografia';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
     <div className="App-content">
-      <h1>Bienvenido a tu buscador</h1>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/filmografia" element={<Filmografia/>}/>
+        <Route path="/filmografia" element={
+      <ProtectedRoute>
+        <Filmografia/>
+    </ProtectedRoute>
+        }/>
       </Routes>
     </div>
   );
